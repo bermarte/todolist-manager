@@ -8,8 +8,8 @@ body {
   line-height: 1.4em;
   background: linear-gradient(120deg, #575652, #030303);
   min-width: 230px;
-  max-width: 550px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin-left: 28%;
   font-weight: 250;
   min-height: 100vh;
 }
