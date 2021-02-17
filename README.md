@@ -12,6 +12,9 @@
 - Refactoring of a JavaScript [Todo List app](https://github.com/KrystynaMil/encapsulation-list-prototype/).
 - The new app should be able to write and retrieve data from db.json.
 - We will deploy our app to Heroku. The final app should work like [this one](https://krystynamil.github.io/encapsulation-list-prototype/public/index.html).
+### run the project
+`npm install`
+`npm run start`
 ### documentation
 - [backlog](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/backlog.md)
 - [development strategy](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/development-strategy.md)
