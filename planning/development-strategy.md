@@ -6,7 +6,7 @@ A refactor of the Practical JavaScript Todo List
 
 ## User Story Dependencies
 
-![Story Dependency Diagram]()
+![Story Dependency Diagram](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/diagram.png?raw=true)
 
 ---
 
