@@ -16,3 +16,4 @@ export function submitNewTodo(evt) {
     container.appendChild(todo.render());
     //add item to db.json
     todo.add();
+}
