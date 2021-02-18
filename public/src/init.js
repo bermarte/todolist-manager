@@ -1,1 +1,3 @@
-console.log('hi');
+'use strict';
+
+import './listeners/addListener.js';

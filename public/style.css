@@ -8,8 +8,8 @@ body {
   line-height: 1.4em;
   background: linear-gradient(120deg, #575652, #030303);
   min-width: 230px;
-  max-width: 500px;
-  margin-left: 28%;
+  max-width: 550px;
+  margin: 0 auto;
   font-weight: 250;
   min-height: 100vh;
 }
@@ -81,8 +81,8 @@ button {
   font-weight: bold;
   right: 23px;
   bottom: 37px;
-position: absolute;
-outline: none;
+  position: absolute;
+  outline: none;
 }
 
 #toggle-all {
@@ -103,6 +103,40 @@ margin: 0.25rem;
 .add-items{
   padding:0;
 
+}
+
+
+/*****************/
+#root{
+  padding-top: 50px;
+}
+.todos{
+  width: 100%;
+  background-color: white;
+}
+.todos li{
+  list-style: none;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.todos li span{
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.done, .edit, .delete{
+  background: black;
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: bold;
+}
+.li-text{
+  width: 60%;
+  line-height: 28px;
 }
 
 
