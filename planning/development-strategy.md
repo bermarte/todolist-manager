@@ -12,7 +12,7 @@ A refactor of the Practical JavaScript Todo List
 
 ## WIREFRAME
 
-![wireframe]()
+![wireframe](../planning/ToDo.png)
 
 ---
 
