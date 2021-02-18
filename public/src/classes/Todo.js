@@ -20,7 +20,6 @@ export class Todo {
         li.id = this.id;
         const span = document.createElement("SPAN");
         span.classList.add('done');
-        span.innerText = 'done';
         const done = `this.nextElementSibling.innerHTML = "<del>${this.todoText}</del>"`;
         span.setAttribute('onclick', done);
 
@@ -32,10 +31,10 @@ export class Todo {
         const divbtns = document.createElement('DIV');
         const edit = document.createElement("SPAN");
         edit.classList.add('edit');
-        edit.innerText = 'save';
+        edit.innerHTML = '<i class="fas fa-pen"></i>';
         const del = document.createElement("SPAN");
         del.classList.add('delete');
-        del.innerText = 'delete';
+        del.innerHTML = '<i class="fa fa-trash"></i>';
 
         const erase ='this.parentNode.parentNode.remove()';
         del.setAttribute('onclick', erase);
@@ -52,4 +51,6 @@ export class Todo {
     }
 
 }
+
+
 
