@@ -87,13 +87,23 @@ export class Todo {
 
     //toggle .strike CSS class
     toggle() {
+        console.log('toggle done');
+        let toggle;
         const textField = document.querySelector(`#text-${this.id}`);
         if (textField.classList.contains('strike')) {
             textField.classList.remove('strike');
-        }
-        else{
+            toggle = false;
+        } else {
             textField.classList.add('strike');
-        }   
+            toggle = true;
+        }
+
+        const storeJson = {
+            "todoText": this.todoText,
+            "completed": toggle,
+            "id": this.id,
+        }
+        restMethods.patchTodo(this.id, storeJson);
     }
 
 }
