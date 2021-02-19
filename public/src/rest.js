@@ -13,7 +13,6 @@ export const restMethods = {
 	},
 
 	postTodo: async function (newTodo) {
-        console.log('post');
 		try {
 			const res = await fetch(url, {
 				method: 'POST',
@@ -28,11 +27,11 @@ export const restMethods = {
 		}
 	},
 
-	patchTodo: async function (id, patcher) {
+	patchTodo: async function (id, newObj) {
 		try {
-			const res = await fetch(`${url}/` + id, {
+			const res = await fetch(`${url}/${id}`, {
 				method: 'PATCH',
-				body: JSON.stringify(patcher),
+				body: JSON.stringify(newObj),
 				headers: {
 					'Content-type': 'application/json; charset=UTF-8',
 				},

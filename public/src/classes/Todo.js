@@ -28,14 +28,16 @@ export class Todo {
         const done = `this.nextElementSibling.innerHTML = "<del>${this.todoText}</del>"`;
         span.setAttribute('onclick', done);
 
-        const div = document.createElement('DIV');
-        div.setAttribute('contenteditable', true);
-        div.classList.add('li-text');
-        div.innerText = this.todoText;
+        const divText = document.createElement('DIV');
+        divText.setAttribute('contenteditable', true);
+        divText.classList.add('li-text');
+        divText.id = `text-${this.id}`;
+        divText.innerText = this.todoText;
 
         const divbtns = document.createElement('DIV');
         const edit = document.createElement("SPAN");
         edit.classList.add('edit');
+        edit.addEventListener( 'click',() => this.edit());
         edit.innerHTML = '<i class="fas fa-pen"></i>';
         const del = document.createElement("SPAN");
         del.classList.add('delete');
@@ -43,16 +45,14 @@ export class Todo {
 
         const erase = 'this.parentNode.parentNode.remove()';
         del.setAttribute('onclick', erase);
-        del.addEventListener( 'click',
-            x => this.delete()
-        );
+        del.addEventListener( 'click',() => this.delete());
         divbtns.appendChild(edit);
         const space = document.createTextNode("\u00A0");
         divbtns.appendChild(space);
         divbtns.appendChild(del);
 
         li.appendChild(span);
-        li.appendChild(div);
+        li.appendChild(divText);
         li.appendChild(divbtns);
 
         return li;
@@ -60,6 +60,7 @@ export class Todo {
 
     //add todo to db.json
     add() {
+        console.log('add');
         const storeJson = {
             "todoText": this.todoText,
             "completed": this.completed,
@@ -72,5 +73,18 @@ export class Todo {
     delete(){
         restMethods.deleteTodo(this.id);
     }
+
+    //edit todo
+    edit() {
+        console.log('patch');
+        const newText =  document.querySelector(`#text-${this.id}`).innerHTML;
+        const storeJson = {
+            "todoText": newText,
+            "completed": this.completed,
+            "id": this.id,
+        }
+        restMethods.patchTodo(this.id, storeJson);
+    }
+
 
 }
