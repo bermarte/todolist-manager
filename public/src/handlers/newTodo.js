@@ -2,8 +2,8 @@
 
 
 import { Todo } from '../classes/Todo.js';
-import {validationText} from '../helpers/validateTodo.js'
 // Importing validationText function from helpers folder
+import {validationText} from '../helpers/validateTodo.js'
 
 
 const container = document.querySelector('.todos');

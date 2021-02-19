@@ -1,17 +1,16 @@
+'use strict';
 
-    'use strict';
+import {
+    restMethods
+} from '../rest.js';
 
-    import {
-        restMethods
-    } from '../rest.js';
 
- 
 export class Todo {
     constructor(text, id, completed) {
         this.todoText = text;
         this.id = id;
         this.completed = completed;
-        console.log('new todo: ', this.id)
+        console.log('new todo: ', this.id);
     }
 
     getText() {
@@ -20,7 +19,7 @@ export class Todo {
     setText(text) {
         this.todoText = text
     }
-    render(){
+    render() {
         const li = document.createElement('LI');
         li.classList.add('todo-lists');
         li.id = this.id;
@@ -42,8 +41,11 @@ export class Todo {
         del.classList.add('delete');
         del.innerHTML = '<i class="fa fa-trash"></i>';
 
-        const erase ='this.parentNode.parentNode.remove()';
+        const erase = 'this.parentNode.parentNode.remove()';
         del.setAttribute('onclick', erase);
+        del.addEventListener( 'click',
+            x => this.delete()
+        );
         divbtns.appendChild(edit);
         const space = document.createTextNode("\u00A0");
         divbtns.appendChild(space);
@@ -52,18 +54,23 @@ export class Todo {
         li.appendChild(span);
         li.appendChild(div);
         li.appendChild(divbtns);
-        
+
         return li;
     }
 
-        add() {
-            const storeJson = {
-                "todoText": this.todoText,
-                "completed": this.completed,
-                "id": this.id,
-            }
-            restMethods.postTodo(storeJson);
+    //add todo to db.json
+    add() {
+        const storeJson = {
+            "todoText": this.todoText,
+            "completed": this.completed,
+            "id": this.id,
         }
-
+        restMethods.postTodo(storeJson);
     }
 
+    //delete todo from db.json
+    delete(){
+        restMethods.deleteTodo(this.id);
+    }
+
+}
