@@ -6,7 +6,8 @@ export const restMethods = {
 	getAll: async function () {
 		try {
 			const res = await fetch(url);
-			return await res.json();
+			const data = await res.json();
+			return data;		
 		} catch (err) {
 			console.log(err);
 		}
@@ -43,7 +44,7 @@ export const restMethods = {
 	},
 	deleteTodo: async function (id) {
 		try {
-			const res = await fetch(`${url}/` + id, {
+			const res = await fetch(`${url}/${id}`, {
 				method: 'DELETE',
 			});
 			return await res.json();
