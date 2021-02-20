@@ -2,9 +2,9 @@
 
 ## group 1 is
 
-- [Anysia](https://github.com/AnisyaPurnama) documentation
-- [Bermarte](https://github.com/bermarte) back-end
-- [Krystyna](https://github.com/KrystynaMil) front-end
+- [Anysia](https://github.com/AnisyaPurnama) (documentation, back-end)
+- [Bermarte](https://github.com/bermarte) (back-end, front-end)
+- [Krystyna](https://github.com/KrystynaMil) (front-end, back-end)
 
 ### what to do
 - Refactoring of a JavaScript [Todo List app](https://github.com/KrystynaMil/encapsulation-list-prototype/).
