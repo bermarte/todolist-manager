@@ -3,7 +3,7 @@
 
 import { Todo } from '../classes/Todo.js';
 // Importing validationText function from helpers folder
-import {validationText} from '../helpers/validateTodo.js'
+import { validationText } from '../helpers/validateTodo.js'
 
 
 const container = document.querySelector('.todos');
@@ -17,5 +17,6 @@ export function submitNewTodo(evt) {
         //add item to db.json
         todo.add();
     }
+    //reset the text once is done
     document.querySelector('#add').value = "";
 }
