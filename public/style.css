@@ -95,6 +95,9 @@ h1 {
   color: rgb(189, 189, 189);
   font-weight: bold;
   padding: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
 }
 
 #toggle-all {
