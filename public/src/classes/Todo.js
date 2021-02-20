@@ -30,7 +30,14 @@ export class Todo {
         const divText = document.createElement('DIV');
         divText.setAttribute('contenteditable', true);
         divText.classList.add('li-text');
-        divText.id = `text-${this.id}`;
+        //check toggle
+        if (this.completed){ 
+            divText.id = `text-${this.id}`;
+            divText.classList.add('strike');
+        }
+        else{
+            divText.id = `text-${this.id}`;
+        }
         divText.innerText = this.todoText;
 
         const divbtns = document.createElement('DIV');
