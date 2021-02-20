@@ -83,10 +83,20 @@ export class Todo {
     //edit todo
     edit(selector) {
         console.log('patch');
-        const newText = document.querySelector(selector).innerHTML;
+        const newText = document.querySelector(selector).innerText;
+
+        //is it done?
+        let completed;
+        if (document.querySelector(selector).classList.contains('strike')) {
+            completed = true;
+        }
+        else{
+            completed = false;
+        }
+
         const storeJson = {
             "todoText": newText,
-            "completed": this.completed,
+            "completed": completed,
             "id": this.id,
         }
         restMethods.patchTodo(this.id, storeJson);
