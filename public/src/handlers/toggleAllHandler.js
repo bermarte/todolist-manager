@@ -20,14 +20,23 @@ export async function toggleAllTodos() {
         lis.map(li=> {
             const textField = document.querySelector(`#text-${li.id}`);
             textField.classList.remove('strike');
+            //update item in db.json
+            const storeJson = {
+                "completed": false
+            }
+            restMethods.patchTodo(li.id, storeJson);
         });
         strike = false;
-        console.log(strike);
     }
     else{
         lis.map(li=> {
             const textField = document.querySelector(`#text-${li.id}`);
             textField.classList.add('strike');
+            //update item in db.json
+            const storeJson = {
+                "completed": true
+            }
+            restMethods.patchTodo(li.id, storeJson);         
         });
         strike = true;
     } 

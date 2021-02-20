@@ -43,7 +43,7 @@ export class Todo {
         const divbtns = document.createElement('DIV');
         const edit = document.createElement("SPAN");
         edit.classList.add('edit');
-        edit.addEventListener('click', () => this.edit());
+        edit.addEventListener('click', () => this.edit(`#text-${this.id}`));
         edit.innerHTML = '<i class="fas fa-pen"></i>';
         const del = document.createElement("SPAN");
         del.classList.add('delete');
@@ -81,9 +81,9 @@ export class Todo {
     }
 
     //edit todo
-    edit() {
+    edit(selector) {
         console.log('patch');
-        const newText = document.querySelector(`#text-${this.id}`).innerHTML;
+        const newText = document.querySelector(selector).innerHTML;
         const storeJson = {
             "todoText": newText,
             "completed": this.completed,
