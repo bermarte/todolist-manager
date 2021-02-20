@@ -7,6 +7,7 @@ validateContainer.style = 'text-align:center;';
 document.body.insertBefore(validateContainer, document.body.firstChild);
 
 const logLogsButton = document.createElement('button');
+logLogsButton.classList.add("validate-btns");
 logLogsButton.innerHTML = 'log the logs';
 logLogsButton.addEventListener('click', () =>
   console.log('interactions:', logger.history)
@@ -27,6 +28,7 @@ if (window.location.href.indexOf('github.io') !== -1) {
   const repoUrl = `https://github.com/${userName}/${repository}`;
 
   const repositoryButton = document.createElement('button');
+  repositoryButton.classList.add("validate-btns");
   repositoryButton.innerHTML = 'repository';
   const repositoryA = document.createElement('a');
   repositoryA.href = repoUrl;
@@ -35,6 +37,7 @@ if (window.location.href.indexOf('github.io') !== -1) {
   validateContainer.appendChild(repositoryA);
 
   const validateHTML = document.createElement('button');
+  validateHTML.classList.add("validate-btns");
   validateHTML.innerHTML = 'validate HTML';
   validateHTML.onclick = () =>
     window.open(
@@ -45,6 +48,7 @@ if (window.location.href.indexOf('github.io') !== -1) {
   validateContainer.appendChild(validateHTML);
 
   const validateCSS = document.createElement('button');
+  validateCSS.classList.add("validate-btns");
   validateCSS.innerHTML = 'validate CSS';
   validateCSS.onclick = () =>
     window.open(
@@ -55,6 +59,7 @@ if (window.location.href.indexOf('github.io') !== -1) {
   validateContainer.appendChild(validateCSS);
 
   const accessibilityCheckButton = document.createElement('button');
+  accessibilityCheckButton.classList.add("validate-btns");
   accessibilityCheckButton.innerHTML = 'accessibility check';
   accessibilityCheckButton.onclick = () =>
     window.open(
@@ -66,6 +71,7 @@ if (window.location.href.indexOf('github.io') !== -1) {
   validateContainer.appendChild(accessibilityCheckButton);
 
   const spellCheckButton = document.createElement('button');
+  spellCheckButton.classList.add("validate-btns");
   spellCheckButton.innerHTML = 'spelling check';
   spellCheckButton.onclick = () =>
     window.open(
