@@ -2,12 +2,10 @@
 
 ## group 1 is
 
-- [Anysia](https://github.com/AnisyaPurnama)
-- [Bermarte](https://github.com/bermarte)
-- [Brain](https://github.com/Brainketunze)
-- [Burak](https://github.com/businan)
-- [Krystyna](https://github.com/KrystynaMil)
-- [Liubov](https://github.com/LiubovPlugar)
+- [Anysia](https://github.com/AnisyaPurnama) documentation
+- [Bermarte](https://github.com/bermarte) back-end
+- [Krystyna](https://github.com/KrystynaMil) front-end
+
 ### what to do
 - Refactoring of a JavaScript [Todo List app](https://github.com/KrystynaMil/encapsulation-list-prototype/).
 - The new app should be able to write and retrieve data from db.json.
