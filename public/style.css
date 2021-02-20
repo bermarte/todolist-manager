@@ -9,7 +9,7 @@ body {
   line-height: 1.4em;
   background: linear-gradient(120deg, #575652, #030303);
   min-width: 230px;
-  max-width: 550px;
+  max-width: 610px;
   margin: 0 auto;
   font-weight: 250;
   min-height: 100vh;
@@ -95,6 +95,9 @@ h1 {
   color: rgb(189, 189, 189);
   font-weight: bold;
   padding: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
 }
 
 #toggle-all {
