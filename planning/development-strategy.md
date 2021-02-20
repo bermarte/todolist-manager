@@ -6,13 +6,13 @@ A refactor of the Practical JavaScript Todo List
 
 ## User Story Dependencies
 
-![Story Dependency Diagram]()
+![Story Dependency Diagram](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/diagram.png?raw=true)
 
 ---
 
 ## WIREFRAME
 
-![wireframe]()
+![wireframe](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/ToDo.png?raw=true)
 
 ---
 
@@ -53,114 +53,84 @@ ___
 ### As a visitor I want to create a new empty list with any title
 
 ### REPO
-This user story is developed on a branch called `render`
+This user story is developed on a branch called `draft`
 
 ### VIEWS
-Create, inside `const listPrototype` object the `render` function that render the new lists
+
+- Create `class Todo`
+- Create object the `render` function that render the new lists
+- Create the function `submitNewTodo`
+- add item to `db.json` `todo.add`
+
 ___
-## 3. List prototype Add
-### As a visitor I want to add items to each list instance
+
+## 3. Input Validation
 
 ### REPO
-This user story is developed on a branch called `add`
+This user story is developed on a branch called `validation`
 
-### HANDLER
-Create, inside `const listPrototype` object the `add` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `button` on the list
+- Check the length of the input: it shouldn't be empty or not longer than a given number
 
 ### VIEWS
-Create, inside `const listPrototype` object the `renderList` function that render the new items of the list.
+
+- Create function `validationText`with max length 60
 
 ---
 ## 4. List prototype Delete
 
-### As a visitor I want to remove items from each list instance
+### As a visitor I want to remove items from list
 ### REPO
 This user story is developed on a branch called `delete`
 
-### HANDLER
-Create, inside `const listPrototype` object the `delete` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `icon` on the list item
-
 ### VIEWS
-Edit the `renderList` function that render the new items of the list.
+
+- Create, inside `const erase` object the `delete` function
+- Remove todo from the back-end `db.json`
+
+### Delete all the todo's at once
+This function is developed on a branch called `global_delete`
+
+- Create the function `deleteAllTodos`
+- Remove item from db.json
+- Remove DOM element
 
 ---
 ## 5. List prototype Toggle Complete
 
 ### As a visitor I want to check the items on the lists that I have completed
 ### REPO
-This user story is developed on a branch called `complete`
-
-### HANDLER
-Create, inside `const listPrototype` object the `complete` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `li` elements on the list item
-
+This user story is developed on a branch called `toggle_done`
 ### VIEWS
-Edit the `renderList` function that render the new items of the list.
-
-## CSS
-Create the `complete`class
+- Add `text-decoration: line-through` CSS class
+- Add `toggle`function
+- Change state in `db.json` accordingly
 
 ---
+
 ## 6. List prototype Toggle All
+
 ### As a visitor I want to check all the items on the lists that I have completed
 
 ### REPO
-This user story is developed on a branch called `all`
+This user story is developed on a branch called `global_toggle`
 
-### HANDLER
-Create, inside `const listPrototype` object the `completeAll` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `button` elements on the list
-
-### VIEWS
-Edit the `renderList` function that render the new items of the list.
-
-## HTML
-
-Create `check all`button
+- Create the `completeAll` function that render the new elements of the list
+### HTML
+Create check all button
 
 ---
 ## 7. List Prototype Editing List
 
 ### As a visitor want to remove any list from the manager
 ### REPO
-This user story is developed on a branch called `_`
+This user story is developed on a branch called `patch`
 
-### HANDLER
-Create, inside `const listPrototype` object the `__` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `__` elements on the list
-
-### VIEWS
-
----
-## 8. List Prototype Editing Items
-
-### As a visitor want to update items in each list instance
-### REPO
-This user story is developed on a branch called `__`
-
-### HANDLER
-Create, inside `const listPrototype` object the `__` function that render the new elements of the list
-
-### LISTENER
-Add listeners for `__` elements on the list
-
-### VIEWS
+- Create `edit`function, store it in Json
+- Add EventListener click `edit` function that render the new elements of the list
 
 ---
 
-## 9. Finishing Touch
+## 8. Finishing Touch
 
 - Code Validation
 - Fix bugs and errors
