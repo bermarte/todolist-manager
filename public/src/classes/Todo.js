@@ -23,10 +23,9 @@ export class Todo {
         const li = document.createElement('LI');
         li.classList.add('todo-lists');
         li.id = this.id;
-        const span = document.createElement("SPAN");
-        span.classList.add('done');
-        const done = `this.nextElementSibling.innerHTML = "<del>${this.todoText}</del>"`;
-        span.setAttribute('onclick', done);
+        const spanDone = document.createElement("SPAN");
+        spanDone.classList.add('done');
+        spanDone.addEventListener('click', () => this.toggle());
 
         const divText = document.createElement('DIV');
         divText.setAttribute('contenteditable', true);
@@ -37,7 +36,7 @@ export class Todo {
         const divbtns = document.createElement('DIV');
         const edit = document.createElement("SPAN");
         edit.classList.add('edit');
-        edit.addEventListener( 'click',() => this.edit());
+        edit.addEventListener('click', () => this.edit());
         edit.innerHTML = '<i class="fas fa-pen"></i>';
         const del = document.createElement("SPAN");
         del.classList.add('delete');
@@ -45,13 +44,13 @@ export class Todo {
 
         const erase = 'this.parentNode.parentNode.remove()';
         del.setAttribute('onclick', erase);
-        del.addEventListener( 'click',() => this.delete());
+        del.addEventListener('click', () => this.delete());
         divbtns.appendChild(edit);
         const space = document.createTextNode("\u00A0");
         divbtns.appendChild(space);
         divbtns.appendChild(del);
 
-        li.appendChild(span);
+        li.appendChild(spanDone);
         li.appendChild(divText);
         li.appendChild(divbtns);
 
@@ -70,14 +69,14 @@ export class Todo {
     }
 
     //delete todo from db.json
-    delete(){
+    delete() {
         restMethods.deleteTodo(this.id);
     }
 
     //edit todo
     edit() {
         console.log('patch');
-        const newText =  document.querySelector(`#text-${this.id}`).innerHTML;
+        const newText = document.querySelector(`#text-${this.id}`).innerHTML;
         const storeJson = {
             "todoText": newText,
             "completed": this.completed,
@@ -86,5 +85,25 @@ export class Todo {
         restMethods.patchTodo(this.id, storeJson);
     }
 
+    //toggle .strike CSS class
+    toggle() {
+        console.log('toggle done');
+        let toggle;
+        const textField = document.querySelector(`#text-${this.id}`);
+        if (textField.classList.contains('strike')) {
+            textField.classList.remove('strike');
+            toggle = false;
+        } else {
+            textField.classList.add('strike');
+            toggle = true;
+        }
+
+        const storeJson = {
+            "todoText": this.todoText,
+            "completed": toggle,
+            "id": this.id,
+        }
+        restMethods.patchTodo(this.id, storeJson);
+    }
 
 }
