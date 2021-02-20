@@ -14,6 +14,7 @@ A refactor of the Practical JavaScript Todo List
 
 ![wireframe](https://github.com/AnisyaPurnama/todolist-manager-group1/blob/main/planning/ToDo.png?raw=true)
 
+
 ---
 
 ## 0.Setup

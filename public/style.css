@@ -1,3 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: red;
+  font: 14px 'Poppins', sans-serif;
+  line-height: 1.4em;
+  background: linear-gradient(120deg, #575652, #030303);
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+  font-weight: 250;
+  min-height: 100vh;
+}
+
+.wrapper{
+
+ position: absolute;
+ width: 600px;
+ height: 120px;
+ top: 200px;
+ box-sizing: border-box;
+ background: rgba(0, 0, 0, 0.8);
+ border-radius: 10px;
+ padding: 1rem;
+ margin: 1rem;
+}
+
+
+
+h1 {
+ position: absolute;
+  right: 10rem;
+  top: -100px;
+  width: 50%;
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+}
+.new-todo{
+  text-align: center;
+  margin-top: 25px;
+  width: 450px;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4em;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+  background:orange;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+}
+.btn {
+  display: none;
+  position: absolute;
+  background-image: url('https://image.flaticon.com/icons/svg/875/875068.svg');
+  background-repeat: no-repeat;
+  right:15px;
+  bottom: 30px;
+  outline: none;
+  border: none;
+  height: 35px;
+  border-radius: 25px;
+  width: 32px;
+  color:black;
+  cursor: pointer;
+  transition: .5s;
+  margin: 0.25rem;
+}
+
+button {
+  background: black;
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  color: grey;
+  font-weight: bold;
+  right: 23px;
+  top: 40px;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+ margin: 0.20rem;
+}
+
+#toggle-all {
+  
+  background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) center center / cover no-repeat;
+  outline: none;
+  height: 45px;
+  border-radius: 10px;
+  width: 45px;
+  cursor: pointer;
+  margin: 0.25rem;
+ font-weight: bold;
+ text-align: center;
+ 
+ 
+}
+
+.add-items{
+  padding:0;
+
+}
+
+/*****************/
+#root{
+  padding-top: 50px;
+}
+.todos{
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+.todos li{
+  list-style: none;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.todos li span {
+text-align: center;
+display: inline-block;
+outline: none;
+height: 30px;
+border-radius: 10px;
+color: grey;
+cursor: pointer;
+
+
+}
+
+.done, .edit, .delete{
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: bold;
+ }
+ .done {
+  background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) center center / cover no-repeat;
+  outline: none;
+  height: 45px;
+  border-radius: 10px;
+  width: 45px;
+  cursor: pointer;
+  margin: 0.25rem;
+ }
+
+.li-text{
+  width: 60%;
+  line-height: 45px;
+  background: orange;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+}
+.strike {
+  text-decoration: line-through;
 }

@@ -2,15 +2,32 @@
 <html lang='en'>
 
 <head>
-  <meta charset='utf8'>
-  <title>RESTful PJS</title>
-
+  <meta charset='UTF-8'>
+  <title>Todo List</title>
+  <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
   <link href='./style.css' rel='stylesheet' />
 </head>
 
 <body>
+<div class="wrapper">
+  <h1>ToDo</h1>
+  <form class="add-items" id="todoForm">
+    <input id="toggle-all" class="" onclick="" type="button" value=" ">
+    <input class="new-todo" id="add" placeholder="add your todo">
+    <input type="submit" onclick=""  class="btn">
+  </form>
+  <button onclick="" id="delete-all">All</button>
 
-  <script type='module' src='./src/init.js'></script>
+  <div id='root'>
+    <ul class= "todos">
+      <!-- contents -->
+    </ul>
+  </div>
+</div>
+<!-- initialize your application -->
+<script type="module" src="./src/init.js"></script>
+<!-- load the review buttons for your live deployment  -->
+<script type="module" src="./lib/review-buttons.js"></script>  
 </body>
 
 </html>
