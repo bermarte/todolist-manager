@@ -5,7 +5,8 @@
   "private": "false",
   "main": "server.js",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "watch": "json-server --watch db.json",
+    "start": "node server.js"
   },
   "author": "@hackyourfuturebelgium",
   "license": "CC BY-SA",

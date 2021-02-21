@@ -86,7 +86,6 @@ export class Todo {
         const newText = document.querySelector(selector).innerHTML;
         const storeJson = {
             "todoText": newText,
-            "completed": this.completed,
             "id": this.id,
         }
         restMethods.patchTodo(this.id, storeJson);
