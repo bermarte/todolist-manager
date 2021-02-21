@@ -20,6 +20,9 @@ export function submitNewTodo(evt) {
         container.appendChild(todo.render());
         //add item to db.json
         todo.add();
+        logger.add({
+            object: Date.now().toString()
+        });
     }
     //reset the text once is done
     document.querySelector('#add').value = "";
