@@ -1,5 +1,6 @@
 'use strict';
-const url = 'http://localhost:3000/todos';
+//const url = 'http://localhost:3000/todos';
+const url = '/todos';
 
 
 export const restMethods = {
