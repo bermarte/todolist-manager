@@ -1,10 +1,13 @@
 'use strict';
 
-import {
-     restMethods
- } from '../rest.js';
+import { restMethods } from '../rest.js';
+import { logger } from "../../lib/logger.js";
 
+/**
+ * delete all the todo's in the front-end and in the back-end
+ */
 export function deleteAllTodos() {
+     
      var oldChildren = [];
      const container = document.querySelector('.todos');
 
@@ -17,3 +20,7 @@ export function deleteAllTodos() {
      }
 
 }
+
+logger.add({
+     handler: 'deleteAllTodos'
+ });

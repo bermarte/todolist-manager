@@ -1,14 +1,13 @@
 'use strict';
 
-import {
-    Todo
-} from '../classes/Todo.js';
-import {
-    restMethods
-} from '../rest.js';
+import { Todo } from '../classes/Todo.js';
+import { restMethods } from '../rest.js';
+import { logger } from "../../lib/logger.js";
 
 const container = document.querySelector('.todos');
-
+/**
+ * creates all the todo's from /todos end-point
+ */
 export async function loadAllTodos() {
     const todos = await restMethods.getAll();
 
@@ -17,3 +16,7 @@ export async function loadAllTodos() {
         container.appendChild(todo.render());
     });
 }
+
+logger.add({
+    handler: 'loadAllTodos'
+});

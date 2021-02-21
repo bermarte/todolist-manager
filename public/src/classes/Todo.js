@@ -4,7 +4,9 @@ import {
     restMethods
 } from '../rest.js';
 
-
+/**
+ * Todo class
+ */
 export class Todo {
     constructor(text, id, completed) {
         this.todoText = text;
@@ -113,3 +115,7 @@ export class Todo {
     }
 
 }
+
+logger.add({
+    class: 'Todo'
+});

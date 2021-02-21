@@ -1,14 +1,14 @@
 'use strict';
 
-import {
-    Todo
-} from '../classes/Todo.js';
-import {
-    restMethods
-} from '../rest.js';
+import { restMethods } from '../rest.js';
+import { logger } from "../../lib/logger.js";
 
 let strike = false;
+/**
+ * Strikethrough, cross out text of all todo's
+ */
 export async function toggleAllTodos() {
+    
     const container = document.querySelector('.todos');
     
     const children = container.childNodes;
