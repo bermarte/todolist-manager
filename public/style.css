@@ -180,6 +180,7 @@ h1 {
   text-align: center;
   border-radius: 10px;
   outline: none;
+  word-wrap: break-word;
 }
 
 .strike {
