@@ -1,8 +1,7 @@
 'use strict';
 
-import {
-    restMethods
-} from '../rest.js';
+import { restMethods } from '../rest.js';
+import { logger } from "../../lib/logger.js";
 
 /**
  * Todo class
