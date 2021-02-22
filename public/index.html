@@ -11,19 +11,29 @@
 <body>
 <div class="wrapper">
   <h1>ToDo</h1>
-  <form class="add-items" id="todoForm">
-    <input id="toggle-all" class="" onclick="" type="button" value=" ">
-    <input class="new-todo" id="add" placeholder="add your todo" maxlength="60">
-    <input type="submit" onclick=""  class="btn">
-  </form>
-  <button onclick="" id="delete-all">All</button>
 
+  <form class="add-items" id="todoForm">
+
+    <input id="toggle-all" class="" onclick="" type="button" value=" ">
+
+    <label class="input-sizer">
+      <input class="new-todo" onInput="this.parentNode.dataset.value = this.value" id="add" placeholder="add your todo" maxlength="34">
+    </label>
+
+    <div>
+      <input type="submit" class="btn">
+      <button id="delete-all">All</button>
+    </div>
+    
+  </form>
+  
   <div id='root'>
     <ul class= "todos">
       <!-- contents -->
     </ul>
   </div>
 </div>
+
 <!-- initialize your application -->
 <script type="module" src="./src/init.js"></script>
 <!-- load the review buttons for your live deployment  -->

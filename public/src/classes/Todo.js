@@ -14,22 +14,20 @@ export class Todo {
         console.log('new todo: ', this.id);
     }
 
-    getText() {
-        return this.todoText
-    }
-    setText(text) {
-        this.todoText = text
-    }
     render() {
+        const maxlength = 34;
         const li = document.createElement('LI');
         li.classList.add('todo-lists');
         li.id = this.id;
-        const spanDone = document.createElement("SPAN");
+        const spanDone = document.createElement('SPAN');
         spanDone.classList.add('done');
         spanDone.addEventListener('click', () => this.toggle());
 
-        const divText = document.createElement('DIV');
+        const divText = document.createElement('INPUT');
         divText.setAttribute('contenteditable', true);
+        divText.setAttribute('maxlength', maxlength);
+        //input's width auto-grow
+        divText.setAttribute('oninput','this.parentNode.dataset.value = this.value');
         divText.classList.add('li-text');
         //check toggle
         if (this.completed){ 
@@ -39,14 +37,21 @@ export class Todo {
         else{
             divText.id = `text-${this.id}`;
         }
-        divText.innerText = this.todoText;
+        divText.value = this.todoText;
+
+        const labelText = document.createElement('LABEL');
+        labelText.classList.add('input-sizer');
+        //set input's width
+        labelText.setAttribute('data-value', this.todoText);
+        labelText.appendChild(divText);
+        
 
         const divbtns = document.createElement('DIV');
-        const edit = document.createElement("SPAN");
+        const edit = document.createElement('SPAN');
         edit.classList.add('edit');
         edit.addEventListener('click', () => this.edit(`#text-${this.id}`));
         edit.innerHTML = '<i class="fas fa-pen"></i>';
-        const del = document.createElement("SPAN");
+        const del = document.createElement('SPAN');
         del.classList.add('delete');
         del.innerHTML = '<i class="fa fa-trash"></i>';
 
@@ -54,12 +59,12 @@ export class Todo {
         del.setAttribute('onclick', erase);
         del.addEventListener('click', () => this.delete());
         divbtns.appendChild(edit);
-        const space = document.createTextNode("\u00A0");
+        const space = document.createTextNode('\u00A0');
         divbtns.appendChild(space);
         divbtns.appendChild(del);
 
         li.appendChild(spanDone);
-        li.appendChild(divText);
+        li.appendChild(labelText);
         li.appendChild(divbtns);
 
         return li;
@@ -84,7 +89,7 @@ export class Todo {
     //edit todo
     edit(selector) {
         console.log('patch');
-        const newText = document.querySelector(selector).innerHTML;
+        const newText = document.querySelector(selector).value;
         const storeJson = {
             "todoText": newText,
             "id": this.id,
