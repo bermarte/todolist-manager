@@ -1,5 +1,8 @@
 'use strict';
 
+var modal = document.getElementById('myModal');
+
+
 // helpers function
 export function validationText(text){
     const maxlength = 34

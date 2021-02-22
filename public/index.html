@@ -8,36 +8,56 @@
   <link href='./style.css' rel='stylesheet' />
 </head>
 
-<body>
-<div class="wrapper">
-  <h1>ToDo</h1>
-
-  <form class="add-items" id="todoForm">
-
-    <input id="toggle-all" class="" onclick="" type="button" value=" ">
-
-    <label class="input-sizer">
-      <input class="new-todo" onInput="this.parentNode.dataset.value = this.value" id="add" placeholder="add your todo" maxlength="34">
-    </label>
-
-    <div>
-      <input type="submit" class="btn">
-      <button id="delete-all"><i class="fa fa-trash"></i></button>
-    </div>
-    
-  </form>
-  
-  <div id='root'>
-    <ul class= "todos">
-      <!-- contents -->
-    </ul>
+<body onload="document.getElementById('myModal').style.display = 'block'" ;>
+  <div class="wrapper-h1">
+    <h1>ToDo</h1>
   </div>
-</div>
+  <div class="wrapper">
+    
+    <form class="add-items" id="todoForm">
 
-<!-- initialize your application -->
-<script type="module" src="./src/init.js"></script>
-<!-- load the review buttons for your live deployment  -->
-<script type="module" src="./lib/review-buttons.js"></script>  
+      <input id="toggle-all" class="" onclick="" type="button" value=" ">
+
+      <label class="input-sizer">
+        <input class="new-todo" onInput="this.parentNode.dataset.value = this.value" id="add"
+          placeholder="add your todo" maxlength="34">
+      </label>
+
+      <div>
+        <input type="submit" class="btn">
+        <button id="delete-all"><i class="fa fa-trash"></i></button>
+      </div>
+
+    </form>
+
+    <div id='root'>
+      <ul class="todos">
+        <!-- contents -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div id="modal-title-container">
+        <p id = "modal-title">keep track of your tasks</p>
+        <hr>
+        <p id = "modal-body"> <span id = "modal-span">info:</span> the length of the text should be between 1 and 34 characters</p>
+      </div>
+      <btn class="close">&times;</btn>
+
+    </div>
+
+  </div>
+
+  <!-- initialize your application -->
+  <script type="module" src="./src/init.js"></script>
+  <!-- load the review buttons for your live deployment  -->
+  <script type="module" src="./lib/review-buttons.js"></script>
 </body>
 
 </html>
