@@ -12,6 +12,7 @@ export function deleteAllTodos() {
      const container = document.querySelector('.todos');
 
      while (container.hasChildNodes()) {
+          if (document.querySelector('li') === null) break;
           //remove item from db.json
           let toRemove = document.querySelector('li').id;
           restMethods.deleteTodo(toRemove);
