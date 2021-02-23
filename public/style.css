@@ -15,24 +15,16 @@ body {
 }
 
 .wrapper {
-  
-  /* height: 120px; */
-  /* position: absolute;
-  top: 200px; */
   min-width: 120px;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 1rem;
-  /* margin: 1rem; */
 }
 .wrapper-h1{
   padding: 80px;
 }
 h1 {
-  /* position: absolute;
-  right: 10rem;
-  top: -100px; */
-  /* width: 50%; */
+
   font-size: 100px;
   color: orange;
   text-align: center;
@@ -249,7 +241,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
   width: 50%;
   border-radius: 12px;
   font-size: 22px;
-  line-height:30px;
+  line-height:34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -258,6 +250,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 }
 #modal-title-container{
   width: 90%;
+  margin-right: 20px;
 }
 #modal-title{
   font-weight: bold;
