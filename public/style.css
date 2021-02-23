@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   font-weight: 250;
   background: linear-gradient(120deg, #575652, #030303);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrapper {
