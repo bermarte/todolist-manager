@@ -2,7 +2,7 @@
 
 ## group 1 is
 
-- [Anysia](https://github.com/AnisyaPurnama) (documentation, back-end)
+- [Anisya](https://github.com/AnisyaPurnama) (documentation, back-end)
 - [Bermarte](https://github.com/bermarte) (back-end, front-end, documentation)
 - [Krystyna](https://github.com/KrystynaMil) (front-end, back-end)
 - [Liubov](https://github.com/LiubovPlugar) (documentation)
