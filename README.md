@@ -22,6 +22,6 @@
 - `npm install`
 - `npm run start`
 ### documentation
-- [backlog](github.com/bermarte/todolist-manager/blob/main/planning/backlog.md)
-- [development strategy](github.com/bermarte/todolist-manager/blob/main/planning/development-strategy.md)
+- [backlog](https://github.com/bermarte/todolist-manager/blob/main/planning/backlog.md)
+- [development strategy](https://github.com/bermarte/todolist-manager/blob/main/planning/development-strategy.md)
 - [project board](https://github.com/AnisyaPurnama/todolist-manager-group1/projects/1?fullscreen=true)
